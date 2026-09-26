@@ -2,7 +2,7 @@ workspace(
     name = "com_google_googleapis",
 )
 
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_live")
 
 ##############################################################################
 # Generator versions stored in generator-versions.json
@@ -26,15 +26,15 @@ load("//:repository_rules.bzl", "switched_rules_by_language")
 
 switched_rules_by_language(
     name = "com_google_googleapis_imports",
-    cc = True,
+    cc = false,
     csharp = True,
     gapic = True,
     go = True,
     go_test = True,
     grpc = True,
-    java = True,
-    nodejs = True,
-    php = True,
+    java = false,
+    nodejs = false,
+    php = false,
     python = True,
     ruby = True,
 )
